@@ -32,4 +32,18 @@ public class Grado {
     public void setPercentuale(String percentuale) {
         this.percentuale = percentuale;
     }
+
+    public String toString(){
+        return "anno: "+anno+"; regione: "+regione+"; percentuale: "+percentuale;
+    }
+
+    public boolean equals(Object o){
+        if (o instanceof Grado){
+            Grado g = (Grado) o;
+            if (g.getAnno().equals(this.getAnno()) && g.getRegione().equals(this.getRegione()) && g.getPercentuale().equals(this.getPercentuale())){
+                return true;
+            }
+        }
+        return false;
+    }
 }

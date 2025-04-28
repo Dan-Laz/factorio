@@ -27,8 +27,8 @@ public class Statistiche {
         return true;
     }
 
-    public ArrayList<String> creaReport(){
-        // restituisce un array di stringhe, ognuna per ogni regione che descrivono i dati per regione
+    public String creaReport(){
+        // restituisce un csv (Stringa)
         return null;
     }
 }
