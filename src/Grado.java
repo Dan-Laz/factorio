@@ -1,4 +1,4 @@
-public class Grado {
+public class Grado implements Comparable {
     private String anno;
     private String regione;
     private String percentuale;
@@ -45,5 +45,15 @@ public class Grado {
             }
         }
         return false;
+    }
+
+    public int compareTo(Object o) {
+        if (o instanceof Grado){
+            Grado g = (Grado) o;
+            if (g.getRegione().equals(this.getRegione())){
+                return 0;
+            }
+        }
+        return -1;
     }
 }
